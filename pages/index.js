@@ -5,8 +5,10 @@ import styles from '@/styles/Home.module.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
+const baseUrl = process.env.NODE_ENV === "development" ? "http://localhost:8080" : process.env.SITE_URL
+
 export default function Home() {
-  fetch("/api/hello", { method: "GET" })
+  fetch(baseUrl + "/api/hello", { method: "GET" })
     .then(response => response.json())
     .then(dataFromHelloEndpoint => console.log(dataFromHelloEndpoint))
 
