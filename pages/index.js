@@ -5,7 +5,7 @@ import styles from '@/styles/Home.module.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
-const baseUrl = process.env.NODE_ENV === "development" ? "http://localhost:8080" : process.env.SITE_URL
+const baseUrl = process.env.NODE_ENV === "development" ? "http://localhost:8080" : process.env.NEXT_PUBLIC_SITE_URL
 
 export default function Home() {
   fetch(baseUrl + "/api/hello", { method: "GET" })
